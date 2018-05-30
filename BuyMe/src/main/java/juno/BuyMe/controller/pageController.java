@@ -12,9 +12,29 @@ public class pageController {
 	@RequestMapping(value= {"/"})
 	public ModelAndView hitterPage() {
 		ModelAndView modelAndView = new ModelAndView("page");
-		modelAndView.addObject("hitMessage","Hit Done");
+		modelAndView.addObject("title","preptoShopper");
+		modelAndView.addObject("userClicksHome",true);
 		return modelAndView;
 	}
+	
+	@RequestMapping(value= {"/about"})
+	public ModelAndView hitabout() {
+		ModelAndView modelAndView = new ModelAndView("page");
+		modelAndView.addObject("title","About Us");
+		modelAndView.addObject("userClicksAbout",true);
+		return modelAndView;
+	}
+	
+	
+	@RequestMapping(value= {"/contact"})
+	public ModelAndView hitcontact() {
+		ModelAndView modelAndView = new ModelAndView("page");
+		modelAndView.addObject("title","Contact");
+		modelAndView.addObject("userClicksContact",true);
+		return modelAndView;
+	}
+	
+	
 	
 	@RequestMapping(value="/testingRP")
 	public ModelAndView requestParamDemo(@RequestParam(value="greeting",required=false) String greetMsg) {
