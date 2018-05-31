@@ -39,6 +39,13 @@
 			<version>${spring.version}</version>
 		</dependency>
 
+		<!-- Passing Backend dependency -->
+		<dependency>
+			<groupId>juno</groupId>
+			<artifactId>BuyMeBackEnd</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 	</dependencies>
 	<build>
 		<finalName>BuyMe</finalName>

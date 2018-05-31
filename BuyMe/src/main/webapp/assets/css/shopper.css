@@ -4,28 +4,25 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-shop-homepage/blob/master/LICENSE)
  */
 
-
-body {
-  padding-top: 56px;
-  height:100%;
-}
-
 @media (min-width: 992px) {
   body {
     padding-top: 70px;
   }
 }
 
-.wrapper{
-	min-height:100%;
-	position:relative;
+
+html, body {
+  height: 100%;
+  margin: 0;
 }
-.footer{
-	position: relative;
-	bottom:10px;
-	height: 10px;
+.wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
 }
-.content{
-	padding-bottom: 60px;
+.footer,
+.push {
+  height: 50px;
 }
-	

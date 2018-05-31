@@ -7,6 +7,7 @@
 <spring:url var="js" value="/resources/js" />
 <c:set var="contextRoot" value="${pageContext.request.contextPath}"></c:set>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,14 +34,15 @@
 </head>
 
 <body>
+
 	<div class="wrapper">
 		<!-- Navigation -->
 		<%@include file="./shared/navbar.jsp"%>
 
-		<div class="content">
 
-			<!-- Page Content -->
-			<!-- Home content displayed only when user clicks home button -->
+		<!-- Page Content -->
+		<!-- Home content displayed only when user clicks home button -->
+		
 			<c:if test="${userClicksHome==true}">
 				<%@include file="home.jsp"%>
 			</c:if>
@@ -52,18 +54,26 @@
 			<c:if test="${userClicksContact==true}">
 				<%@include file="contactus.jsp"%>
 			</c:if>
-
+			
+			<c:if test="${userClicksViewProducts==true or userClicksSpecificCategory==true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			
+			<div class="push"></div>
 		</div>
 
 		<!-- Footer -->
+		
 		<%@include file="./shared/footer.jsp"%>
-
+		
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.bundle.min.js"></script>
 		<script src="${js}/shopper.js"></script>
 
-	</div>
+	
+
+
 
 </body>
 
