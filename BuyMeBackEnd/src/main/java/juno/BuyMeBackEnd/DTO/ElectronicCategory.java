@@ -1,7 +1,14 @@
 package juno.BuyMeBackEnd.DTO;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity(name="category")
 public class ElectronicCategory {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int categoryId;
 	private String categoryName;
 	private String imagePath;
@@ -32,6 +39,13 @@ public class ElectronicCategory {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
+	@Override
+	public String toString() {
+		return "ElectronicCategory [categoryId=" + categoryId + ", categoryName=" + categoryName + ", imagePath="
+				+ imagePath + ", active=" + active + "]";
+	}
+	
+	
 	
 	
 }
